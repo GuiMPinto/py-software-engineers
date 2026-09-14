@@ -1,7 +1,8 @@
 class SoftwareEngineer:
-    def __init__(self, name: str, skills: list = None) -> None:
+    def __init__(self, name: str) -> None:
         self.name = name
-        self.skills = skills if skills is not None else []
+        self.skills = []
+
 
     def learn_skill(self, skill: str) -> None:
         self.skills.append(skill)
