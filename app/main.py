@@ -3,16 +3,14 @@ class SoftwareEngineer:
         self.name = name
         self.skills = skills if skills is not None else []
 
-
     def learn_skill(self, skill: str) -> None:
         self.skills.append(skill)
 
 
 class FrontendDeveloper(SoftwareEngineer):
-    def __init__(self, name: str):
+    def __init__(self, name: str) -> None:
         super().__init__(name)
         self.skills.extend(["JavaScript", "HTML", "CSS"])
-
 
     def create_awesome_web_page(self) -> str:
         print(f"{self.name} is creating a webpage...")
@@ -20,7 +18,7 @@ class FrontendDeveloper(SoftwareEngineer):
 
 
 class BackendDeveloper(SoftwareEngineer):
-    def __init__(self, name: str):
+    def __init__(self, name: str) -> None:
         super().__init__(name)
         self.skills.extend(["Python", "SQL", "Django"])
 
@@ -31,10 +29,9 @@ class BackendDeveloper(SoftwareEngineer):
 
 class AndroidDeveloper(SoftwareEngineer):
     class BackendDeveloper(SoftwareEngineer):
-        def __init__(self, name: str):
+        def __init__(self, name: str) -> None:
             super().__init__(name)
             self.skills.extend(["Java", "Android studio"])
-
 
     def create_smooth_mobile_app(self) -> str:
         print(f"{self.name} is creating a mobile app...")
@@ -43,7 +40,7 @@ class AndroidDeveloper(SoftwareEngineer):
 
 class FullStackDevelope(SoftwareEngineer, AndroidDeveloper,
                         BackendDeveloper, FrontendDeveloper):
-    def __init__(self, name: str):
+    def __init__(self, name: str) -> None:
             super().__init__(name)
             self.skills.extend()
 
@@ -51,4 +48,3 @@ class FullStackDevelope(SoftwareEngineer, AndroidDeveloper,
         print(f"{self.name} started creating a web application...")
         self.create_powerful_api()
         self.create_awesome_web_page()
-
