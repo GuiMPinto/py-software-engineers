@@ -28,21 +28,18 @@ class BackendDeveloper(SoftwareEngineer):
 
 
 class AndroidDeveloper(SoftwareEngineer):
-    class BackendDeveloper(SoftwareEngineer):
-        def __init__(self, name: str) -> None:
-            super().__init__(name)
-            self.skills.extend(["Java", "Android studio"])
+    def __init__(self, name: str) -> None:
+        super().__init__(name)
+        self.skills.extend(["Java", "Android studio"])
 
     def create_smooth_mobile_app(self) -> str:
         print(f"{self.name} is creating a mobile app...")
         return "Ads every three swipes"
 
 
-class FullStackDevelope(SoftwareEngineer, AndroidDeveloper,
-                        BackendDeveloper, FrontendDeveloper):
+class FullStackDeveloper(FrontendDeveloper, BackendDeveloper):
     def __init__(self, name: str) -> None:
             super().__init__(name)
-            self.skills.extend()
 
     def create_web_application(self) -> str:
         print(f"{self.name} started creating a web application...")
